@@ -23,7 +23,7 @@ Este repositório foi organizado em três diretórios, contemplando um padrão d
 
 
 
-Todo o embasamento teórico, diagramas UML e conceitos utilizados para a elaboração deste código foram baseados no material do [**Refactoring Guru**](https://refactoring.guru/).
+Todo o embasamento teórico, diagramas UML e conceitos utilizados para a elaboração deste código foram baseados no material do [**Refactoring Guru**](https://refactoring.guru/) com auxílio da LLM Gemini, da Google.
 
 
 
