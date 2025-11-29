@@ -56,7 +56,7 @@ class GuitarRigFacade:
         self.cab.set_mic_position("centro")
         print("--- Rig pronto. A aguardar input da guitarra ---")
 
-  def activate_black_metal(self):
+    def activate_black_metal(self):
         print("\n--- Preset: TRUE NORWEGIAN BLACK METAL ---")
         self.amp.turn_on()
         
