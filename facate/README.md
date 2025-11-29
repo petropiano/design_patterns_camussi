@@ -18,13 +18,13 @@ Imagine que você precisa fazer seu código trabalhar com um conjunto amplo de o
 
 Como resultado, a lógica de negócio de suas classes vai ficar fortemente acoplada aos detalhes de implementação de classes de terceiros, tornando o código difícil de compreender e manter.
 
-No nosso contexto musical: Para tocar, você teria que ligar o amplificador, esperar esquentar, ajustar o ganho do pedal, regular o threshold do noise gate e posicionar o microfone virtual. Se esquecer um passo, o som sai ruim.
-
 ## COMO ELE RESOLVE
 
-O Facade é uma classe que fornece uma interface simples para um subsistema complexo contendo muitas partes móveis. O Facade pode fornecer uma funcionalidade limitada em comparação com trabalhar com o subsistema diretamente, mas ele inclui apenas as funcionalidades que o cliente realmente se importa.
+Então, cria-se uma classe Fachada (Facade) que atua como um intermediário simples entre o  código e o sistema complexo.
 
-Ter um facade é muito útil quando você precisa integrar sua aplicação com uma biblioteca sofisticada que tem dezenas de funcionalidades, mas você precisa apenas de um pouquinho delas.
+Pense no Facade como um operador de atendimento telefônico de uma grande loja. Se você quiser fazer um pedido complexo, você não liga para o estoque, depois para o departamento de embalagem e depois para a transportadora. Você liga para o atendente (Facade). Ele sabe exatamente quem chamar e em qual ordem para resolver seu problema.
+
+o _GuitarRigFacade_ é esse atendente. Ele conhece todas as peças soltas (Amp, Pedal, NoiseGate), sabe quais botões girar e em qual sequência ligá-los.
 
 ![An example of taking a phone order](https://refactoring.guru/images/patterns/diagrams/facade/live-example-en.png)
 
@@ -36,7 +36,7 @@ Ter um facade é muito útil quando você precisa integrar sua aplicação com u
     
 2.  O **Additional Facade** (opcional) pode ser criado para prevenir a poluição de um único facade com funcionalidades não relacionadas.
     
-3.  O **Complex Subsystem** consiste em dezenas de objetos variados. Para fazer com que todos façam algo que valha a pena, você tem que mergulhar fundo nos detalhes de implementação do subsistema, tais como inicializar objetos na ordem correta e suprí-los com dados no formato correto.
+3.  O **Complex Subsystem** consiste em dezenas de objetos variados. Para fazer com que todos sejam úteis, é necessário se aprofundar nos detalhes de implementação do subsistema, tais como inicializar objetos na ordem correta e suprí-los com dados no formato correto.
     
 4.  O **Client** usa o facade em vez de chamar os objetos do subsistema diretamente.
 
