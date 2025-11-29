@@ -13,6 +13,7 @@ Imagine um objeto complexo que requer uma inicialização trabalhosa, passo a pa
 Para construir uma casa simples, você precisa de quatro paredes, um chão, uma porta, janelas e um telhado. Mas e se você quiser uma casa maior, com quintal, piscina, sistema de aquecimento e fiação elétrica?
 
  ![Lots of subclasses create another problem](https://refactoring.guru/images/patterns/diagrams/builder/problem1.png)
+ 
 E se alguém quiser Garagem, Piscina e Estátua?
 Teríamos que criar: `CasaComGaragemEPiscinaEEstatua`
 E assim por diante, para cada combinação.
@@ -24,6 +25,7 @@ Você pode acabar tornando o programa muito complexo ao tentar criar uma subclas
 
 ![The telescoping constructor](https://refactoring.guru/images/patterns/diagrams/builder/problem2.png)
 
+
 O problema surge na hora de criar o objeto `Casa`:
 É difícil saber qual parâmetro pertence à qual variável.
 
@@ -33,6 +35,7 @@ O padrão Builder resolve esses problemas extraindo o código de construção do
 
 
 ![Applying the Builder pattern](https://refactoring.guru/images/patterns/diagrams/builder/solution1.png)
+
 No caso do objeto _Casa_, não é mais necessário criar um objeto "adivinhando" todos os cômodos de uma só vez. Em vez disso, o padrão nos permite construir o objeto passo a passo. Só se usa os métodos para as características que realmente são relevantes.
 
 
@@ -41,6 +44,7 @@ No caso do objeto _Casa_, não é mais necessário criar um objeto "adivinhando"
 
 ## DIAGRAMA UML
 ![Builder](https://refactoring.guru/images/patterns/diagrams/builder/structure-indexed.png?id=44b3d763ce91dbada5d8394ef777437f)
+
 
 1. A interface *Builder* declara etapas de construção do produto que      são comuns a todos os tipos de builders.
   
