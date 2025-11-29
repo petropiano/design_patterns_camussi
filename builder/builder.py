@@ -51,20 +51,3 @@ class BuilderHamburger:
         produto = self.hamburger
         self.reset()
         return produto
-
-class Diretor:
-    def fazer_xbacon(self, builder):
-        builder.reset()
-        builder.set_pao("Brioche")
-        builder.set_carne("Picanha")
-        builder.add_queijo("Cheddar")
-        builder.add_bacon()
-        builder.add_maionese()
-
-    def fazer_xsalada(self, builder):
-        builder.reset()
-        builder.set_pao("Integral")
-        builder.set_carne("Frango")
-        builder.add_queijo("Prato")
-        builder.add_salada()
-        builder.add_maionese()
